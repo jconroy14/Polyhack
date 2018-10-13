@@ -12,15 +12,16 @@ def combat_menu(player):
             option = int(option)
         except:
             print("Please input the number of your choice")
-            if (option == 1):
-                list_attacks(player) #takes array from andrew
-            elif (option == 2):
-                return input_attack(player) #takes array from andrew
-            else:
-                print("Number not valid") #retry entry
+        if (option == 1):
+            list_attacks(player) #takes array from andrew
+        elif (option == 2):
+            return input_attack(player) #takes array from andrew
+        else:
+            print("Number not valid") #retry entry
 
 
 def list_attacks(player):
+    print("in listattack")
     for a in player.get_attacks():   #if the value is in array
         print (a)
 

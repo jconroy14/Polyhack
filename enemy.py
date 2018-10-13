@@ -9,6 +9,8 @@ class enemy(Entity) :
 	def __init__(self, level) :
         self.enemy_type = random() * num_enemy_types
 		self.init_stats()
+		for i in range(0, level) :
+			self.give_random_adj()
 
 	def get_random_attack_name(self) :
 		return choice(self.get_attacks())

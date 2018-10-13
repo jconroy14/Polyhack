@@ -105,6 +105,3 @@ class Room:
             room_to_add = Room(self.player,self.level,self.count+1,self,-1 * direction_int)
             self.next_rooms[direction_int] = room_to_add
             return room_to_add.explore_room()
-
-test_room = Room("1",1,0,None,None)
-test_room.explore_room()

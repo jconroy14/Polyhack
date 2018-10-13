@@ -3,7 +3,7 @@ from player import Player
 
 def combat_menu(player):
 
-    print("1. list attacks")
+    print("\n1. list attacks")
     print("2. Enter attack")
 
     while(True):

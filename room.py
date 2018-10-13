@@ -51,7 +51,7 @@ class Room:
         print("\nThis is a room!")
         if(self.combat):
             mob = enemy.enemy(self.level);
-            print(mob.getDescription())
+            print(mob.get_name())
             if(not combat_handler.doCombat(mob,self.player)):
                 return False;
 

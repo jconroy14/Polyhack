@@ -48,7 +48,6 @@ class Room:
 
     #main method for room
     def explore_room(self):
-        print("\nThis is a room!")
         if(self.combat):
             mob = enemy.enemy(self.level);
             print("You see a " + mob.get_name())
@@ -100,7 +99,6 @@ class Room:
             print("DONE")
             return True
 
-        print("exploring!")
         if(self.next_rooms[direction_int] is not None):
             return self.next_rooms[direction_int].explore_room()
         else:

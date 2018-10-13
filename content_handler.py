@@ -65,7 +65,7 @@ def get_all_adjectives() :
 
 def get_enemy_type(level, type):
     theme = get_theme(level)
-    return random.choice(get_theme_enemy_dict()[theme])
+    return get_theme_enemy_dict()[theme].split()[type]
 
 def get_theme_enemy_dict(): #str to str[] theme to enemies
     return create_str_dict()

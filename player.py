@@ -7,6 +7,7 @@ class Player(Entity) :
 
     def __init__(self, name):
         self.name = name
+        self.init_stats()
         Entity.__init__(self)
 
     def get_player_name(self) :
@@ -22,7 +23,7 @@ class Player(Entity) :
         return toReturn + self.get_player_name()
 
     def reset_all_stats() : #Reset all stats and health
-        curr_stats = base_stats
+        self.curr_stats = self.base_stats
 
     def partial_reset_stats() :
         for i in range(0, len(curr_stats)) :

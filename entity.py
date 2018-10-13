@@ -36,3 +36,7 @@ class Entity :
         toReturn = []
         for adj in self.adjectives :
             toReturn.append()
+
+    def init_stats(self) :
+        self.base_stats = {100, 10, 10, 10}
+        self.curr_stats = self.base_stats

@@ -53,7 +53,7 @@ def evas_success(two):
 ####################################
 
 def do_combat(player, enemy):
-
+    print("player stats: " + str(player.get_curr_stats()))
     player_health = player.get_curr_stats()[HEALTH_INDEX]
     enemy_health = enemy.get_curr_stats()[HEALTH_INDEX]
 

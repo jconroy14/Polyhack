@@ -50,9 +50,10 @@ class Room:
     def explore_room(self):
         print("\nThis is a room!")
         if(self.combat):
+            print("ENTERING COMBAT")
             mob = enemy.enemy(self.level);
             print(mob.get_name())
-            if(not combat_handler.doCombat(mob,self.player)):
+            if(not combat_handler.do_combat(mob,self.player)):
                 return False;
 
         self.output_move_options()

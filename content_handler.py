@@ -26,8 +26,10 @@ def create_dict ():
     with open("Content/adjective_book.csv", "r") as file:
         adjective_book_dict = {}
         for line in file:
+            if line == "\n":
+                continue
             line = line.split()
-            key = line [0]
+            key = line[0]
             values = []
             for word in line:
                 if word != key:
@@ -39,6 +41,8 @@ def create_str_dict(variable_file = "Content/theme_enemy.csv"):
     with open(variable_file, "r") as file:
         str_dict = {}
         for line in file:
+            if line == "\n":
+                continue
             line = line.split(',')
             key = line [0]
             values = line [1]

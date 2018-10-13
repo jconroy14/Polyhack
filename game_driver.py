@@ -11,11 +11,13 @@ def run_game() :
     alive = True
     level = 1
     while(alive) :
+        player.give_rand_adj()
+
         os.system('cls' if os.name == 'nt' else 'clear')
         print("LEVEL " + str(level))
-        print("You have " + str(player.get_curr_stats()[0]) + " health")
+        print("You are " + ", ".join(player.get_adjectives()))
+        print("You have " + str(player.get_curr_stats()[0]) + " health\n")
 
-        player.give_rand_adj()
         firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()
         level += 1

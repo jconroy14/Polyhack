@@ -51,7 +51,6 @@ class Room:
         if(self.combat):
             mob = enemy.enemy(self.level);
             print("You see a " + mob.get_name())
-            print("You are " + self.player.get_name())
             print("ENTERING COMBAT")
             if(not combat_handler.do_combat(self.player,mob)):
                 return False;

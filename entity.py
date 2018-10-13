@@ -9,7 +9,7 @@ class Entity :
         return self.adjectives
 
     # Adds the one string argument to adjectives
-    def add_adjective(self, adj) :
+    def give_adjective(self, adj) :
         self.adjectives.append(adj)
 
     # Returns int[] current stats

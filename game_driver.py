@@ -1,5 +1,6 @@
 import io_handler as ui
 from player import Player
+from room import Room
 
 def run_game() :
     print("hi")
@@ -10,7 +11,7 @@ def run_game() :
     level = 1
     while(alive) :
         player.give_rand_adj()
-        firstRoom = Room(player, level)
+        firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()
         level += 1
 

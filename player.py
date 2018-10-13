@@ -1,11 +1,13 @@
 import random
 from entity import Entity
+from room import Room
 
 class Player(Entity) :
     num_enemy_types = 1;
 
     def __init__(self, name):
         self.name = name
+        Entity.__init__(self,name)
 
     def get_player_name(self) :
         return self.name

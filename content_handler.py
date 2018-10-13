@@ -1,6 +1,6 @@
 
 def create_dict ():
-    with open("adjective_book.csv", "r") as file:
+    with open("Content/adjective_book.csv", "r") as file:
         adjective_book_dict = {}
         for line in file:
             line = line.split()
@@ -26,12 +26,13 @@ def get_all_adjectives() :
     toReturn = []
     for adj in get_adj_book_dict1_dict() :
         toReturn.append(adj)
+    return toReturn
 
 def get_theme_enemy_dict():
     return create_str_dict()
 def get_flr_theme_descrip_dict():
-    return create_str_dict("flr_theme_descrip.csv")
+    return create_str_dict("Content/flr_theme_descrip.csv")
 def get_adj_atk_descrip_dict():
-    return create_str_dict("adj_attack.csv")
+    return create_str_dict("Content/adj_attack.csv")
 def get_adj_book_dict1_dict():
     return create_dict()

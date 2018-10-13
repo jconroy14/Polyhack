@@ -37,7 +37,7 @@ class Room:
             self.available_passageways.append(previous_direction)
             self.next_rooms[previous_direction] = previous_room
 
-        if(random.randint(0,1) > -1):
+        if(random.randint(0,1) > 0):
             self.combat = True;
 
         num_passages = random.randint(1,3)
@@ -50,10 +50,11 @@ class Room:
     def explore_room(self):
         print("\nThis is a room!")
         if(self.combat):
-            print("ENTERING COMBAT")
             mob = enemy.enemy(self.level);
-            print(mob.get_name())
-            if(not combat_handler.do_combat(mob,self.player)):
+            print("You see a " + mob.get_name())
+            print("You are " + self.player.get_name())
+            print("ENTERING COMBAT")
+            if(not combat_handler.do_combat(self.player,mob)):
                 return False;
 
         self.output_move_options()

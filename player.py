@@ -25,13 +25,13 @@ class Player(Entity) :
     def reset_all_stats() : #Reset all stats and health
         self.curr_stats = self.base_stats
 
-    def partial_reset_stats() :
-        for i in range(0, len(curr_stats)) :
-            if(curr_stats[i] > base_stats[i] + 1) :
-                delta = curr_stats[i] - base_stats[i]
-                curr_stats[i] -= (delta / 2)
-            elif(curr_stats[i] < base_stats[i] - 1) :
-                delta = base_stats[i] - curr_stats[i]
-                curr_stats += (delta / 2)
+    def partial_reset_stats(self) :
+        for i in range(0, len(self.curr_stats)) :
+            if(self.curr_stats[i] > self.base_stats[i] + 1) :
+                delta = self.curr_stats[i] - self.base_stats[i]
+                self.curr_stats[i] -= (delta / 2)
+            elif(self.curr_stats[i] < self.base_stats[i] - 1) :
+                delta = self.base_stats[i] - self.curr_stats[i]
+                self.curr_stats += (delta / 2)
             else :
-                curr_stats[i] = base_stats[i]
+                self.curr_stats[i] = self.base_stats[i]

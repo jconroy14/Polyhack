@@ -1,7 +1,7 @@
 import random
 from entity import Entity
 
-class player(Entity) :
+class Player(Entity) :
     num_enemy_types = 1;
 
     def __init__(self, name):

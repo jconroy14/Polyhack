@@ -1,5 +1,5 @@
 import entity
-import player
+from player import Player
 
 def combat_menu(player):
 

@@ -25,3 +25,7 @@ class enemy(Entity) :
         for adj in self.get_adjectives() :
             toReturn = toReturn + adj + " "
         return toReturn + self.get_enemy_type()
+
+    def init_stats(self) :
+        self.base_stats = [200, 70, 70, 70]
+        self.curr_stats = self.base_stats

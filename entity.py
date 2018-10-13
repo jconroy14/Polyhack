@@ -35,7 +35,6 @@ class Entity :
     def get_attacks(self) :
         toReturn = []
         atkDict = content_handler.get_adj_to_attack_dict()
-        print("adj: " + str(self.adjectives))
         for adj in self.adjectives :
             toReturn.append(atkDict[adj])
         return toReturn

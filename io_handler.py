@@ -21,13 +21,13 @@ def combat_menu(player):
 
 
 def list_attacks(player):
-    print("in listattack")
     for a in player.get_attacks():   #if the value is in array
         print (a)
 
 
 def input_attack(player):
     while (True):
+        print("Options: " + str(player.get_attacks()))
         option = input('What attack do you want to use? ')
         if option in player.get_attacks():
             return option

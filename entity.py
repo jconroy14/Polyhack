@@ -29,7 +29,10 @@ class Entity :
 
     #give rand adj
     def give_rand_adj(self) :
-        self.give_adjective(random.choice(content_handler.get_all_adjectives()))
+        adj = random.choice(content_handler.get_all_adjectives())
+        while adj in self.adjectives :
+            adj = random.choice(content_handler.get_all_adjectives())
+        self.give_adjective(adj)
 
     # Returns string[] attacks
     def get_attacks(self) :

@@ -1,4 +1,5 @@
 import random
+import entity
 
 class Player(Entity) :
 	num_enemy_types = 1;
@@ -20,3 +21,17 @@ class Player(Entity) :
 		for adj in self.get_adjectives() :
 			toReturn = toReturn + adj + " "
 		return toReturn + self.get_player_name()
+		
+	def reset_all_stats() : #Reset all stats and health
+		curr_stats = base_stats
+		
+	def partial_reset_stats() :
+		for i in range(0, len(curr_stats)) :
+			if(curr_stats[i] > base_stats[i] + 1) :
+				delta = curr_stats[i] - base_stats[i]
+				curr_stats[i] -= (delta / 2)
+			elif(curr_stats[i] < base_stats[i] - 1) :
+				delta = base_stats[i] - curr_stats[i]
+				curr_stats += (delta / 2)
+			else :
+				curr_stats[i] = base_stats[i]

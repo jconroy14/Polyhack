@@ -3,7 +3,6 @@ from player import Player
 from room import Room
 
 def run_game() :
-    print("hi")
     ui.ui_intro()
     name = ui.ui_prompt_player_name()
     player = Player(name)

@@ -11,10 +11,17 @@ EVAS_INDEX = 3
 def do_attack(attack_name, one, two) : # one attacks two
     effect = content_handler.get_attack_effect(attack_name)
     if (evas_success(two) == True):
-        print("Miss!")
+        if(one.__class__.__name__ == "Player"):
+            print("You miss!")
+        else:
+            print("Enemy misses!")
     else:
         calculate_effects(effect, one, two)
-        print(content_handler.get_attack_description(attack_name))
+        if(one.__class__.__name__ == "Player"):
+            print("You " + str(content_handler.get_attack_description(attack_name)))
+        else:
+            print("Enemy " + str(content_handler.get_attack_description(attack_name)))
+
 
 
 def calculate_effects(effect, one, two) :
@@ -57,7 +64,6 @@ def evas_success(two):
 ####################################
 
 def do_combat(player, enemy):
-    print("player stats: " + str(player.get_curr_stats()))
     player_health = player.get_curr_stats()[HEALTH_INDEX]
     enemy_health = enemy.get_curr_stats()[HEALTH_INDEX]
 

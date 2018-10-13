@@ -68,9 +68,9 @@ def do_combat(player, enemy):
         do_attack(attack_choice, player, enemy)
         do_attack(enemy.get_random_attack_name(), enemy, player)
 
-        print("STATUS: ")
-        print("Player: " + str(player.get_curr_stats()))
-        print("Enemy: " + str(enemy.get_curr_stats()))
+        # print("STATUS: ")
+        # print("Player: " + str(player.get_curr_stats()))
+        # print("Enemy: " + str(enemy.get_curr_stats()))
 
         player_health = player.get_curr_stats()[HEALTH_INDEX]
         enemy_health = enemy.get_curr_stats()[HEALTH_INDEX]
@@ -79,7 +79,7 @@ def do_combat(player, enemy):
         print("You have been eaten by a grue")
         return False
     else :
-        print("You defeated the " + enemy.get_name() + "!")
+        print("You defeated the " + enemy.get_name() + "!\n")
         player.partial_reset_stats()
         return True
 

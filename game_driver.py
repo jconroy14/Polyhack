@@ -2,6 +2,7 @@ import io_handler as ui
 from player import Player
 from room import Room
 import os
+import content_handler
 
 def run_game() :
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -17,7 +18,8 @@ def run_game() :
         print("LEVEL " + str(level))
         print("You are " + ", ".join(player.get_adjectives()))
         print("You have " + str(player.get_curr_stats()[0]) + " health\n")
-        print("You see " + str(get_flr_theme_descrip_dict()[content_handler.get_theme(level)]))
+        print("You see " + content_handler.get_theme(level) + ": " + \
+            str(content_handler.get_flr_theme_descrip_dict()[content_handler.get_theme(level)]))
 
         firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()

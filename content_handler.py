@@ -21,4 +21,11 @@ def create_str_dict(variable_file):
             values = line [1]
             str_dict[key] = values 
     return str_dict
-
+def get_theme_enemy_dict():
+    return create_str_dict()
+def get_flr_theme_descrip_dict():
+    return create_str_dict("flr_theme_descrip.csv")
+def get_adj_atk_descrip_dict():
+    return create_str_dict("adj_attack.csv")
+def get_adj_book_dict1_dict():
+    return create_dict()

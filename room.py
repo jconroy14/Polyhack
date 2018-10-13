@@ -4,7 +4,7 @@ import enemy
 import combat_handler
 
 def getInput():
-    return input("Waiting: ")
+    return input(">> ")
 
 # fake methods for testing
 def createMob(a_level):

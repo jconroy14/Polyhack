@@ -3,35 +3,33 @@ from player import Player
 
 def combat_menu(player):
 
-    print("\n1. list attacks")
-    print("2. Enter attack")
+    print("You can use: " + str(", ".join(player.get_attacks())))
 
     while(True):
-        option = input("Your choice: ") #user chooses which option
-        try:
-            option = int(option)
-        except:
-            print("Please input the number of your choice")
-        if (option == 1):
-            list_attacks(player) #takes array from andrew
-        elif (option == 2):
-            return input_attack(player) #takes array from andrew
+        option = input(">> ").lower() #user chooses which option
+        valid_inputs = player.get_attacks()
+
+        valid_inputs.append("list")
+        if(option in valid_inputs):
+            if (option == "list"):
+                list_attacks(player) #takes array from andrew
+            else:
+                return option #takes array from andrew
         else:
-            print("Number not valid") #retry entry
+            print("Input not valid")
 
 
 def list_attacks(player):
     for a in player.get_attacks():   #if the value is in array
         print (a)
 
-
 def input_attack(player):
-    while (True):
-        option = input('What attack do you want to use? ')
-        if option in player.get_attacks():
-            return option
-        else:
-            print ("Attack not learned. What attack do you want to use?")
+    option = input('What attack do you want to use? ')
+    if option in player.get_attacks():
+        return option
+    else:
+        print ("Attack not learned.")
+        return combat_menu(player)
 
 
 def ui_intro():

@@ -1,3 +1,5 @@
+import random
+
 class Entity :
     def __init__(self, name):
         self.adjectives = []; # string[]

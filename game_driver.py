@@ -17,6 +17,7 @@ def run_game() :
         print("LEVEL " + str(level))
         print("You are " + ", ".join(player.get_adjectives()))
         print("You have " + str(player.get_curr_stats()[0]) + " health\n")
+        print("You see " + str(get_flr_theme_descrip_dict()[content_handler.get_theme(level)]))
 
         firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()

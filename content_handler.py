@@ -69,8 +69,8 @@ def get_enemy_type(level, type):
 
 def get_theme_enemy_dict(): #str to str[] theme to enemies
     return create_str_dict()
-def get_flr_theme_descrip_dict(): #str to str theme to description
-    return create_str_dict("Content/flr_1_descrip.csv")
+def get_flr_theme_descrip_dict(): #str to str, theme to description
+    return create_str_dict("Content/flr_theme_descrip.csv")
 def get_adj_atk_descrip_dict():
     return create_str_dict("Content/adj_attack.csv")
 def get_adj_book_dict1_dict():

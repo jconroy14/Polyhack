@@ -27,5 +27,10 @@ class enemy(Entity) :
         return toReturn + self.get_enemy_type()
 
     def init_stats(self) :
-        self.base_stats = [5, 5, 5, 20]
+        health = random.randint(5,10)
+        defense = random.randint(5,10)
+        attack = random.randint(5,10)
+        evasion = random.randint(0,50)
+
+        self.base_stats = [health, attack, defense, evasion]
         self.curr_stats = self.base_stats

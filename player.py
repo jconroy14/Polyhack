@@ -35,3 +35,12 @@ class Player(Entity) :
                 self.curr_stats += (delta / 2)
             else :
                 self.curr_stats[i] = self.base_stats[i]
+
+    def init_stats(self) :
+        health = 100
+        attack = random.randint(10,20)
+        defense = random.randint(5,10)
+        evasion = random.randint(0,20)
+
+        self.base_stats = [health, attack, defense, evasion]
+        self.curr_stats = self.base_stats

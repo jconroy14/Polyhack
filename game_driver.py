@@ -9,13 +9,14 @@ def run_game() :
     alive = True
     level = 1
     while(alive) :
+        print(chr(27) + "[2J")
+        print("LEVEL " + str(level))
+        print("You have " + str(player.get_curr_stats()[0]) + " health")
+
         player.give_rand_adj()
         firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()
-        print("alive: " + str(alive))
         level += 1
-        print(chr(27) + "[2J")
-        print("LEVEL " + str(level))
 
 
 def main() :

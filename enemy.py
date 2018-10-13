@@ -4,19 +4,21 @@ import content_handler
 
 class enemy(Entity) :
     #Health, Attack, Defense, Evasion
-    num_enemy_types = 1;
+    num_enemy_types = 2;
 
     def __init__(self, level) :
-        self.enemy_type = random.random() * num_enemy_types
+        Entity.__init__(self)
+        self.level = level
+        self.enemy_type = random.randint(0,self.num_enemy_types)
         self.init_stats()
         for i in range(0, level) :
-            self.give_random_adj()
+            self.give_rand_adj()
 
     def get_random_attack_name(self) :
         return random.choice(self.get_attacks())
 
     def get_enemy_type(self) :
-        return content_handler.get_enemy_type(enemy_type) #TODO
+        return content_handler.get_enemy_type(self.level,self.enemy_type) #TODO
 
     def get_name(self) :
         toReturn = ""

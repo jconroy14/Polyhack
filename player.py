@@ -7,7 +7,7 @@ class Player(Entity) :
 
     def __init__(self, name):
         self.name = name
-        Entity.__init__(self,name)
+        Entity.__init__(self)
 
     def get_player_name(self) :
         return self.name

@@ -2,7 +2,7 @@ import random
 import content_handler
 
 class Entity :
-    def __init__(self, name):
+    def __init__(self):
         self.adjectives = []; # string[]
         self.base_stats = []; # int[]
         self.curr_stats = []; # int[]

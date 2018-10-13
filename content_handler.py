@@ -1,23 +1,23 @@
 def get_theme(num) :
     if num == 0 :
         return "Hilly University"
-    elif num == 1
+    elif num == 1:
         return "The Mall"
-    elif num == 2
+    elif num == 2:
         return "Winter Wonderland"
-    elif num == 3
+    elif num == 3:
         return "Volcano"
-    elif num == 4
+    elif num == 4:
         return "Sky"
-    elif num == 5
+    elif num == 5:
         return "The Flintstone's Cave"
-    elif num == 6
+    elif num == 6:
         return "Under the Sea"
-    elif num == 7
+    elif num == 7:
         return "Forest"
-    elif num == 8
+    elif num == 8:
         return "Desert"
-    elif num == 9
+    elif num == 9:
         return "Haunted House"
 
 
@@ -35,7 +35,7 @@ def create_dict ():
             adjective_book_dict[key] = values
     return adjective_book_dict
 
-def create_str_dict(variable_file):
+def create_str_dict(variable_file = "Content/theme_enemy.csv"):
     with open(variable_file, "r") as file:
         str_dict = {}
         for line in file:
@@ -52,13 +52,13 @@ def get_all_adjectives() :
     return toReturn
 
 def get_enemy_type(level, type):
-    theme = getTheme(level)
+    theme = get_theme(level)
     return get_theme_enemy_dict()[theme][type]
 
 def get_theme_enemy_dict(): #str to str[] theme to enemies
     return create_str_dict()
 def get_flr_theme_descrip_dict(): #str to str theme to description
-    return create_str_dict("Content/flr_theme_descrip.csv")
+    return create_str_dict("Content/flr_1_descrip.csv")
 def get_adj_atk_descrip_dict():
     return create_str_dict("Content/adj_attack.csv")
 def get_adj_book_dict1_dict():

@@ -1,8 +1,8 @@
 import random
-import entity
+from entity import Entity
 import content_handler
 
-class enemy(entity) :
+class enemy(Entity) :
 	#Health, Attack, Defense, Evasion
 	num_enemy_types = 1;
 

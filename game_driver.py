@@ -1,16 +1,17 @@
 import io_handler as ui
 
 def run_game() :
-    ui.ui_intro()
-    name = ui.ui_prompt_player_name()
-    player = Player(name)
-    alive = True
-    level = 1
-    while(alive) :
-        player.give_rand_adj()
-        firstRoom = Room(player, level)
-        alive = firstRoom.explore_room()
-        level += 1
+    print("hi")
+    # ui.ui_intro()
+    # name = ui.ui_prompt_player_name()
+    # player = Player(name)
+    # alive = True
+    # level = 1
+    # while(alive) :
+    #     player.give_rand_adj()
+    #     firstRoom = Room(player, level)
+    #     alive = firstRoom.explore_room()
+    #     level += 1
 
 
 def main() :

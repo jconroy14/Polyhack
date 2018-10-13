@@ -7,7 +7,7 @@ def combat_menu(player):
     print("2. Enter attack")
 
     while(True):
-        option = input("Your choice: ") #user chooses which option, TODO: sanitize
+        option = input("Your choice: ") #user chooses which option
         try:
             option = int(option)
         except:

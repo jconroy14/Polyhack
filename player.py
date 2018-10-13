@@ -1,37 +1,34 @@
 import random
-import entity
+from entity import Entity
 
-class player(entity) :
-	num_enemy_types = 1;
+class player(Entity) :
+    num_enemy_types = 1;
 
-	def __init__(self, name):
+    def __init__(self, name):
         self.name = name
 
-	def give_rand_adj(self) :
-		self.give_adjective(random.choice(get_all_adjectives()))
+    def get_player_name(self) :
+        return self.name
 
-	def get_player_name(self) :
-		return self.name
+    def set_player_name(self, name):
+        self.name = name
 
-	def set_player_name(self, name) :
-		self.name = name
+    def get_name(self) :
+        toReturn = ""
+        for adj in self.get_adjectives() :
+            toReturn = toReturn + adj + " "
+        return toReturn + self.get_player_name()
 
-	def get_name(self):
-		toReturn = ""
-		for adj in self.get_adjectives() :
-			toReturn = toReturn + adj + " "
-		return toReturn + self.get_player_name()
+    def reset_all_stats() : #Reset all stats and health
+        curr_stats = base_stats
 
-	def reset_all_stats() : #Reset all stats and health
-		curr_stats = base_stats
-
-	def partial_reset_stats() :
-		for i in range(0, len(curr_stats)) :
-			if(curr_stats[i] > base_stats[i] + 1) :
-				delta = curr_stats[i] - base_stats[i]
-				curr_stats[i] -= (delta / 2)
-			elif(curr_stats[i] < base_stats[i] - 1) :
-				delta = base_stats[i] - curr_stats[i]
-				curr_stats += (delta / 2)
-			else :
-				curr_stats[i] = base_stats[i]
+    def partial_reset_stats() :
+        for i in range(0, len(curr_stats)) :
+            if(curr_stats[i] > base_stats[i] + 1) :
+                delta = curr_stats[i] - base_stats[i]
+                curr_stats[i] -= (delta / 2)
+            elif(curr_stats[i] < base_stats[i] - 1) :
+                delta = base_stats[i] - curr_stats[i]
+                curr_stats += (delta / 2)
+            else :
+                curr_stats[i] = base_stats[i]

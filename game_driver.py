@@ -11,8 +11,11 @@ def run_game() :
     while(alive) :
         player.give_rand_adj()
         firstRoom = Room(player, level, 0)
-        alive = firstRoom.explore_room()
+        print(firstRoom.explore_room())
+        # alive = firstRoom.explore_room()
         level += 1
+        print(chr(27) + "[2J")
+        print("LEVEL " + str(level))
 
 
 def main() :

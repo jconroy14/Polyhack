@@ -80,6 +80,7 @@ def do_combat(player, enemy):
         enemy_health = enemy.get_curr_stats()[HEALTH_INDEX]
 
     if (player_health <= 0) :
+        print("You have been eaten by a grue")
         return False
     else :
         player.partial_reset_stats()

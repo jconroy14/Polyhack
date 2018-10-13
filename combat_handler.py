@@ -18,9 +18,9 @@ def do_attack(attack_name, one, two) : # one attacks two
     else:
         calculate_effects(effect, one, two)
         if(one.__class__.__name__ == "Player"):
-            print("You " + str(content_handler.get_attack_description(attack_name)) + " attack the " + str(two.get_enemy_type()))
+            print("You " + str(content_handler.get_attack_description(attack_name)) + " attack the " + str(two.get_name()) + "!")
         else:
-            print("Enemy " + str(content_handler.get_attack_description(attack_name)) + " attack you!")
+            print("The " + one.get_name() + " " + str(content_handler.get_attack_description(attack_name)) + " attack you!")
 
 
 

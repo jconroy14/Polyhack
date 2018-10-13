@@ -30,7 +30,7 @@ class enemy(Entity) :
         health = random.randint(5,10)
         defense = random.randint(5,10)
         attack = random.randint(5,10)
-        evasion = random.randint(0,50)
+        evasion = random.randint(0,20)
 
         self.base_stats = [health, attack, defense, evasion]
         self.curr_stats = self.base_stats

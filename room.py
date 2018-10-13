@@ -17,7 +17,7 @@ def enterCombat(aMob,aPlayer):
     return True
 
 def stairway_function(x):
-    return 0.1*x;
+    return 0.1*x*x;
 
 class Room:
     #constructor
@@ -102,7 +102,7 @@ class Room:
 
         print("exploring!")
         if(self.next_rooms[direction_int] is not None):
-            self.next_rooms[direction_int].explore_room()
+            return self.next_rooms[direction_int].explore_room()
         else:
             room_to_add = Room(self.player,self.level,self.count+1,self,-1 * direction_int)
             self.next_rooms[direction_int] = room_to_add

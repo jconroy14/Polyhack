@@ -33,7 +33,7 @@ class Entity :
 
     # Returns string[] attacks
     def get_attacks(self) :
-        toReturn = []
+        toReturn = ["slap"]
         atkDict = content_handler.get_adj_to_attack_dict()
         for adj in self.adjectives :
             toReturn.append(atkDict[adj])

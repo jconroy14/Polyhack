@@ -12,6 +12,7 @@ def run_game() :
         player.give_rand_adj()
         firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()
+        print("alive: " + str(alive))
         level += 1
         print(chr(27) + "[2J")
         print("LEVEL " + str(level))

@@ -79,6 +79,8 @@ def get_adj_to_attack_dict():
     return create_str_dict("Content/adj_to_attack.csv")
 
 def get_attack_effect(name_of_attack):
+    if(name_of_attack == "slap"):
+        return [0,0,0,0]
     #get adj from attack
     adj_to_attack = get_adj_to_attack_dict();
     attack = list(adj_to_attack.keys())[list(adj_to_attack.values()).index(name_of_attack)]

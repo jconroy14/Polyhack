@@ -6,9 +6,9 @@ class Player(Entity) :
     num_enemy_types = 1;
 
     def __init__(self, name):
+        Entity.__init__(self)
         self.name = name
         self.init_stats()
-        Entity.__init__(self)
 
     def get_player_name(self) :
         return self.name

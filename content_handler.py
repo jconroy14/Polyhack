@@ -67,3 +67,5 @@ def get_adj_atk_descrip_dict():
     return create_str_dict("Content/adj_attack.csv")
 def get_adj_book_dict1_dict():
     return create_dict()
+def get_adj_to_attack_dict():
+    return create_str_dict("Content/adj_to_attack.csv")

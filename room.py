@@ -37,7 +37,7 @@ class Room:
             self.available_passageways.append(previous_direction)
             self.next_rooms[previous_direction] = previous_room
 
-        if(random.randint(0,1) > 0):
+        if(random.randint(0,1) > -1):
             self.combat = True;
 
         num_passages = random.randint(1,3)

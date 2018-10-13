@@ -9,7 +9,7 @@ class entity :
 		return self.adjectives
 
 	# Adds the one string argument to adjectives
-	def add_adjective(self, string adj) :
+	def add_adjective(self, adj) :
 		self.adjectives.append(adj)
 
 	# Returns int[] current stats
@@ -17,7 +17,7 @@ class entity :
 		return self.curr_stats
 
 	# Sets current stats to input int[]
-	def set_curr_stats(self, int[] stats) :
+	def set_curr_stats(self, stats) :
 		self.curr_stats = stats
 
 	# Returns int[] base stats

@@ -36,15 +36,11 @@ def calculate_effects(effect, one, two) :
             two_curr_stats[HEALTH_INDEX] -= damage
 
 
-        # print("effect: " + str(effect))
-        # print("affected_stats: " + str(two_curr_stats))
-        # print("actor_stats: " + str(one_curr_stats))
         for i in range(0,len(effect)):
             if (two_curr_stats[i] + effect[i] < 0) :
                 two_curr_stats[i] = 0
             else :
                 two_curr_stats[i] += effect[i]
-
 
 
 def evas_success(two):

@@ -3,28 +3,28 @@ import entity
 
 class Player(Entity) :
 	num_enemy_types = 1;
-	
+
 	def __init__(self, name):
         self.name = name
-		
+
 	def give_rand_adj(self) :
-		self.give_adjective(choice(get_all_adjectives()))
-		
+		self.give_adjective(random.choice(get_all_adjectives()))
+
 	def get_player_name(self) :
 		return self.name
-	
+
 	def set_player_name(self, name) :
 		self.name = name
-	
+
 	def get_name(self):
 		toReturn = ""
 		for adj in self.get_adjectives() :
 			toReturn = toReturn + adj + " "
 		return toReturn + self.get_player_name()
-		
+
 	def reset_all_stats() : #Reset all stats and health
 		curr_stats = base_stats
-		
+
 	def partial_reset_stats() :
 		for i in range(0, len(curr_stats)) :
 			if(curr_stats[i] > base_stats[i] + 1) :

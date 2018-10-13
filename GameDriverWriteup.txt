@@ -1,0 +1,35 @@
+Entity
+	string[] adjectives;
+	int[] base_stats;
+	int[] curr_stats;
+	
+	String[] get_adjectives() {}
+	int[] get_curr_stats() {}
+	void set_curr_stats(int[] stats) {}
+	int[] get_base_stats() {}
+	String[] get_attacks() {}
+	
+
+Enemy
+	int enemy_type;
+	get_random_attack_name() {}
+	
+Player
+	void reset_all_stats() {} //Reset all stats and health
+	void partial_reset_stats() {} //Bring stats 1/2 way back to base, don't change health
+	
+
+//functions from Andrew
+
+int[] get_attack_effect();
+string get_attack_description();
+
+//functions for Combat
+
+void do_attack(string attack_name, Entity one, Entity two);
+void calculate_effects(int effect[], Entity one, Entity two);
+bool evas_success(Entity two);
+bool do_combat(Player player, Enemy enemy);
+
+combat_menu(player)
+input_attack(player)

@@ -1,4 +1,5 @@
 import random
+import io_handler
 
 HEALTH_INDEX = 0
 ATK_INDEX = 1
@@ -56,8 +57,10 @@ def do_combat(player, enemy):
     player_health = player.get_curr_stats()[HEALTH_INDEX]
     enemy_health = enemy.get_curr_stats()[HEALTH_INDEX]
 
-    while (player_health > 0 and enemy_health > 0) :
-        do_attack(get_attack_name(), player, enemy)
+	attack_choice = io_handler.combat_menu(player)
+	
+    while (player_health > 0 && enemy_health > 0) :
+        do_attack(attack_choice, player, enemy)
         do_attack(enemy.get_rand_attack_name(), enemy, player)
 
 

@@ -6,22 +6,25 @@ def combat_menu(player):
     print("1. list attacks")
     print("2. Enter attack")
 
-    option = int(input) #user chooses which option, TODO: sanitize
+    
 
     while(True):
+		option = input("Your choice: ") #user chooses which option, TODO: sanitize
+		try:
+			option = int(option)
+		except:
+			print("Please input the number of your choice")
         if (option == 1):
             list_attacks(player) #takes array from andrew
         elif (option == 2):
             return input_attack(player) #takes array from andrew
         else:
-            print("You don't know that move, please try again!") #retry entry
-    return
+            print("Number not valid") #retry entry
 
 
 def list_attacks(player):
     for a in player.get_attacks():   #if the value is in array
         print (a)
-    return
 
 
 def input_attack(player):
@@ -31,7 +34,6 @@ def input_attack(player):
             return option
         else:
             print ("Attack not learned. What attack do you want to use?")
-    return
 
 
 def ui_intro():

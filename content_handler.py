@@ -11,7 +11,7 @@ def create_dict ():
                     values.append(int(word))
             adjective_book_dict[key] = values
     return adjective_book_dict
-	
+
 def create_str_dict(variable_file):
     with open(variable_file, "r") as file:
         str_dict = {}
@@ -19,8 +19,14 @@ def create_str_dict(variable_file):
             line = line.split(',')
             key = line [0]
             values = line [1]
-            str_dict[key] = values 
+            str_dict[key] = values
     return str_dict
+
+def get_all_adjectives() :
+    toReturn = []
+    for adj in get_adj_book_dict1_dict() :
+        toReturn.append(adj)
+
 def get_theme_enemy_dict():
     return create_str_dict()
 def get_flr_theme_descrip_dict():

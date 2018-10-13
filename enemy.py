@@ -27,5 +27,5 @@ class enemy(Entity) :
         return toReturn + self.get_enemy_type()
 
     def init_stats(self) :
-        self.base_stats = [5, 5, 5, 5]
+        self.base_stats = [5, 5, 5, 20]
         self.curr_stats = self.base_stats

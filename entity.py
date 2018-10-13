@@ -1,4 +1,4 @@
-class Entity :
+class entity :
 	def __init__(self, name):
         self.adjectives = []; # string[]
 		self.base_stats = []; # int[]

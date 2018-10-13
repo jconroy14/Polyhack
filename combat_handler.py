@@ -18,9 +18,9 @@ def do_attack(attack_name, one, two) : # one attacks two
     else:
         calculate_effects(effect, one, two)
         if(one.__class__.__name__ == "Player"):
-            print("You " + str(content_handler.get_attack_description(attack_name)))
+            print("You " + str(content_handler.get_attack_description(attack_name)) + " attack the " + two.get_name() + "!")
         else:
-            print("Enemy " + str(content_handler.get_attack_description(attack_name)))
+            print("Enemy " + str(content_handler.get_attack_description(attack_name)) + " attack you!")
 
 
 
@@ -83,6 +83,7 @@ def do_combat(player, enemy):
         print("You have been eaten by a grue")
         return False
     else :
+        print("You defeated the " + enemy.get_name() + "!")
         player.partial_reset_stats()
         return True
 

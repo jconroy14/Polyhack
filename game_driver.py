@@ -24,13 +24,17 @@ def run_game() :
         firstRoom = Room(player, level, 0)
         alive = firstRoom.explore_room()
         level += 1
+        if level >= 10 :
+            break
 
     again = input("Play again? (y/n)")
     if(again == "y"):
         run_game()
+    else
+        print("Thanks for playing!")
 
 def main() :
-    run_game();
+    run_game()
 
 if __name__ == '__main__':
     main()

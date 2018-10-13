@@ -1,8 +1,8 @@
-
+import io_handler as ui
 
 def run_game() :
-	ui_intro()
-	name = ui_prompt_player_name()
+	ui.ui_intro()
+	name = ui.ui_prompt_player_name()
 	player = Player(name)
 	alive = True
 	level = 1
@@ -10,7 +10,7 @@ def run_game() :
 		player.give_rand_adj()
 		firstRoom = Room(player, level++)
 		alive = firstRoom.explore_room()
-		
+
 
 def main() :
 	run_game();

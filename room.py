@@ -1,6 +1,6 @@
 from direction import direction, dir_input_mappings
 import random
-# import enemy
+import enemy
 import combat_handler
 
 def getInput():
@@ -50,9 +50,9 @@ class Room:
     def explore_room(self):
         print("\nThis is a room!")
         if(self.combat):
-            mob = createMob(self.level);
-            print(mob_getDescription())
-            if(not enterCombat(mob,self.player)):
+            mob = enemy.enemy(self.level);
+            print(mob.getDescription())
+            if(not combat_handler.doCombat(mob,self.player)):
                 return False;
 
         self.output_move_options()

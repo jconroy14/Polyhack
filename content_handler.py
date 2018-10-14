@@ -2,25 +2,25 @@ import random
 
 def get_theme(num) :
     if num == 0 :
-        return "Hilly University"
+        return "hilly university"
     elif num == 1:
-        return "The Mall"
+        return "a mall"
     elif num == 2:
-        return "Winter Wonderland"
+        return "a winter wonderland"
     elif num == 3:
-        return "Volcano"
+        return "a volcano"
     elif num == 4:
-        return "Sky"
+        return "the sky"
     elif num == 5:
-        return "The Flintstone's Cave"
+        return "the Flintstone's Cave"
     elif num == 6:
-        return "Under the Sea"
+        return "under the Sea"
     elif num == 7:
-        return "Forest"
+        return "forest"
     elif num == 8:
-        return "Desert"
+        return "the desert"
     elif num == 9:
-        return "Haunted House"
+        return "a haunted house"
 
 
 

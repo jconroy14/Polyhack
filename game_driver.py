@@ -10,7 +10,7 @@ def run_game() :
     name = ui.ui_prompt_player_name()
     player = Player(name)
     alive = True
-    level = 1
+    level = 0
     while(alive) :
         player.give_rand_adj()
 
@@ -30,7 +30,7 @@ def run_game() :
     again = input("Play again? (y/n)")
     if(again == "y"):
         run_game()
-    else
+    else:
         print("Thanks for playing!")
 
 def main() :

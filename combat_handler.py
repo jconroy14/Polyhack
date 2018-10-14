@@ -79,7 +79,8 @@ def do_combat(player, enemy):
         print("You have been eaten by a grue")
         return False
     else :
-        print("You defeated the " + enemy.get_name() + "!\n")
+        print("You defeated the " + enemy.get_name() + "!")
+        print("You have " + str(player.get_curr_stats()[0]) + " health left\n")
         player.partial_reset_stats()
         return True
 
